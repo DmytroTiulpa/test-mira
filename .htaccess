@@ -1,0 +1,8 @@
+RewriteEngine on
+#если картинки - вернуть
+RewriteCond %{REQUEST_FILENAME} !-f
+#если папки - вернуть
+RewriteCond %{REQUEST_FILENAME} !-d
+#если что-то другое - перенаправить на индекс
+RewriteRule .* index.php [L]
+#RewriteRule . /index.php [L]
